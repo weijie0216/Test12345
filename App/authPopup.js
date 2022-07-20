@@ -21,7 +21,7 @@ function selectAccount () {
     } else if (currentAccounts.length === 1) {
         username = currentAccounts[0].username;
         welcomeUser(username);
-        updateTable();
+        populateData();
     }
 }
 
@@ -35,7 +35,7 @@ function handleResponse(response) {
     if (response !== null) {
         username = response.account.username;
         welcomeUser(username);
-        updateTable();
+        populateData();
     } else {
 
         selectAccount();

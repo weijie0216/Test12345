@@ -10,7 +10,7 @@ const msalConfig = {
     authority: "https://login.microsoftonline.com/db992bae-4cb3-4086-8c91-55255b0c39fe", // Defaults to "https://login.microsoftonline.com/common"
     redirectUri: "https://mctcadsassessment.azurewebsites.net", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.href
     postLogoutRedirectUri: "https://mctcadsassessment.azurewebsites.net/signout", // Simply remove this line if you would like navigate to index page after logout.
-    navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
+    navigateToLoginRequestUrl: true, // If "true", will navigate back to the original request location before processing the auth code response.
   },
   cache: {
     cacheLocation: "localStorage", // Configures cache location. "sessionStorage" is more secure, but "localStorage" gives you SSO.

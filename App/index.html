@@ -87,9 +87,16 @@
         console.log(fullName.slice(1, 8).join(' '));
         console.log(fullName.slice(0, 1).join(' '));
 
+        if (fullName.slice(1, 8).join(' ')) {
+          var firstName = fullName.slice(1, 8).join(' ');
+        }
+        else{
+          var firstName = fullName.slice(0, 1).join(' ');
+        }
+
         let _data = {
           "apiKey": "6b9b91e5-6403-41c1-b364-b20a2546d435",
-          "firstName": fullName.slice(1, 8).join(' '),
+          "firstName": firstName,
           "lastName": fullName.slice(0, 1).join(' '),
           "phone": "",
           "email": response.account.username

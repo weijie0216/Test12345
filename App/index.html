@@ -95,7 +95,7 @@
         }
 
         let _data = {
-          "apiKey": "6b9b91e5-6403-41c1-b364-b20a2546d435",
+          "apiKey": "BC432B61D64B1CA89B964F7CDB599",
           "firstName": fullName.slice(0, 1).join(' '),
           "lastName": getLastName,
           "phone": "",
@@ -111,10 +111,10 @@
         // Making an API call (request)
         // and getting the response back
 
-        let outputresult = await fetch('https://unified.apiservice.dev.cads.ai/api/v1/tenant/handshake', {
+        let outputresult = await fetch('https://api-prod.cads.ai/api/v1/tenant/handshake', {
             method: "POST",
             body: JSON.stringify(_data),
-            headers: {"Content-type": "application/json; charset=UTF-8"}
+            headers: {"accept": "text/plain","Content-type": "application/json","Cookie": "ARRAffinity=d2d5fc2dace4a2ea31f0e7912193047e5b927718f34481fcdc6666793a2fd2b8; ARRAffinitySameSite=d2d5fc2dace4a2ea31f0e7912193047e5b927718f34481fcdc6666793a2fd2b8"}
         })
         
         // Parsing it to JSON format

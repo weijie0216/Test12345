@@ -125,14 +125,11 @@
         let generatedurl = result.data;
 
         //document.getElementById("testing").src = generatedurl;
-        //window.open(generatedurl, "_self");
+        window.open(generatedurl, "_self");
 
-        window.location.replace(generatedurl);
-
-        window.addEventListener("load", function () {
-          // do things after the DOM loads fully
-          window.location.replace("https://cads.ai/tenant/assessment/detail/"+detailParam);
-        });
+        //window.location.replace(generatedurl);
+        
+        window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
 
     };
   }

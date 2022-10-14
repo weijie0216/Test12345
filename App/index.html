@@ -129,10 +129,19 @@
 
         window.location.replace(generatedurl);
 
+        window.addEventListener("load", function () {
+          // do things after the DOM loads fully
+          window.location.replace("https://cads.ai/tenant/assessment/detail/"+detailParam);
+        });
+
     };
   }
 
   // Calling the function
+  var url_string = window.location.href;
+  var url = new URL(url_string);
+  var detailParam = url.searchParams.get("detail");
+  
   signIn();
 
 </script>

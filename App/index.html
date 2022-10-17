@@ -127,11 +127,11 @@
 
         let response = await fetch(generatedurl, {
             method: "GET",
-            //mode: "no-cors",
-            headers: {"accept": "text/plain","Content-type": "application/x-www-form-urlencoded","Access-Control-Allow-Headers": "content-type","Access-Control-Allow-Methods": "GET","Access-Control-Allow-Origin": "*"}
+            mode: "no-cors",
+            headers: {"accept": "text/plain"}
         });
 
-        if (response.ok) {
+        if (response.status = '302') {
           window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_blank")
         }
 

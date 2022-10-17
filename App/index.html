@@ -123,19 +123,17 @@
         // Retrieving data from JSON
         let generatedurl = result.data;
 
-        window.open(generatedurl, "_self");
+        await window.location.assign(generatedurl);
 
         //document.getElementById("testing").src = generatedurl;
         //window.location.replace(generatedurl);
 
-        setTimeout(function(){
-          redirectUser();
-        }, 10000);
+        redirectUser();
 
     };
 
     async function redirectUser() {
-      window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+      window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
     }
 
   }

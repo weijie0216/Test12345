@@ -124,12 +124,18 @@
         let generatedurl = result.data;
 
         //document.getElementById("testing").src = generatedurl;
-        let loadAssessment = await window.open(generatedurl, "_self");
-
         //window.location.replace(generatedurl);
 
-        window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+        const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
 
+        const loadAssessment = async () => {
+          await sleep(1000);
+          window.open(generatedurl, "_self");
+          await sleep(3000);
+          window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+        }
+
+        loadAssessment();
     };
 
   }

@@ -129,10 +129,14 @@
         //window.location.replace(generatedurl);
 
         setTimeout(function(){
-          window.top.location="https://cads.ai/tenant/assessment/detail/"+detailParam
+          redirectUser();
         }, 10000);
 
     };
+
+    async function redirectUser() {
+      window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+    }
 
   }
 

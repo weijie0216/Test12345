@@ -119,19 +119,21 @@
         
         // Parsing it to JSON format
         let result = await outputresult.json();
-        console.log(result.data);
 
         // Retrieving data from JSON
         let generatedurl = result.data;
 
         //document.getElementById("testing").src = generatedurl;
-        window.open(generatedurl, "_self");
+        let loadAssessment = await window.open(generatedurl, "_self");
 
         //window.location.replace(generatedurl);
-        
+
+        loadAssessment.close();
+
         window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
 
     };
+
   }
 
   // Calling the function

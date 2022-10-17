@@ -129,8 +129,10 @@
         //window.location.replace(generatedurl);
 
         setTimeout(() => {
-          window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
-        }, 7000);
+          console.log("Redirect to assessment");
+        }, 5000);
+
+        window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
     };
 
   }

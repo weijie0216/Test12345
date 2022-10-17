@@ -128,7 +128,7 @@
         let response = await fetch(generatedurl, {
             method: "GET",
             //mode: "no-cors",
-            headers: {"accept": "text/plain","Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "*"}
+            headers: {"accept": "text/plain","Content-type": "text/plain","Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "*"}
         });
 
         if (response.ok) {

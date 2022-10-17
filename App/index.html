@@ -128,19 +128,11 @@
         //document.getElementById("testing").src = generatedurl;
         //window.location.replace(generatedurl);
 
-        delayRedirect();
+        setTimeout(function(){
+          window.top.location="https://cads.ai/tenant/assessment/detail/"+detailParam
+        }, 10000);
 
     };
-
-    function delayRedirect(){
-        var count = 10;
-        setInterval(function(){
-            count--;
-            if (count == 0) {
-              window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self"); 
-            }
-        },1000);
-    }
 
   }
 

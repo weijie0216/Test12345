@@ -128,9 +128,9 @@
 
         //window.location.replace(generatedurl);
 
-        loadAssessment.close();
-
-        window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+        document.addEventListener("DOMContentLoaded", function(){
+          window.location.replace("https://cads.ai/tenant/assessment/detail/"+detailParam);
+        });
 
     };
 

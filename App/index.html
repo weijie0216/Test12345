@@ -125,10 +125,12 @@
 
         //window.location.assign(generatedurl);
 
-        let response = await fetch(generatedurl);
+        let response = await fetch(generatedurl, {
+            method: "GET"
+        });
 
         if (response.ok) {
-          window.open("https://cads.ai/tenant/assessment/detail/"+detailParam,"_blank")
+          window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_blank")
         }
 
         //document.getElementById("testing").src = generatedurl;

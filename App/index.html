@@ -126,7 +126,8 @@
         //window.location.assign(generatedurl);
 
         let response = await fetch(generatedurl, {
-            method: "GET"
+            method: "GET",
+            headers: {"accept": "application/json","Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "*"}
         });
 
         if (response.ok) {

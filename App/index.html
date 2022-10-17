@@ -127,8 +127,8 @@
 
         let response = await fetch(generatedurl, {
             method: "GET",
-            mode: "no-cors",
-            headers: {"accept": "application/json","Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "*"}
+            //mode: "no-cors",
+            headers: {"accept": "text/plain","Access-Control-Allow-Origin": "*","Access-Control-Allow-Methods": "*"}
         });
 
         if (response.ok) {

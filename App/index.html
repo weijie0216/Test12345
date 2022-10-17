@@ -123,18 +123,22 @@
         // Retrieving data from JSON
         let generatedurl = result.data;
 
-        await window.location.assign(generatedurl);
+        //window.location.assign(generatedurl);
+
+        let response = await fetch(generatedurl);
+
+        if (response.ok) {
+          window.open("https://cads.ai/tenant/assessment/detail/"+detailParam,"_blank")
+        }
 
         //document.getElementById("testing").src = generatedurl;
         //window.location.replace(generatedurl);
 
-        redirectUser();
+        /*setTimeout(function() {
+            window.location.href = "https://cads.ai/tenant/assessment/detail/"+detailParam;
+        }, 5000);*/
 
     };
-
-    async function redirectUser() {
-      window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
-    }
 
   }
 

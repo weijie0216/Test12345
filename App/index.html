@@ -125,12 +125,13 @@
 
         //window.location.assign(generatedurl);
 
-        window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self")
+        let redirect_user = await window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self")
 
-        if(window.location.href = "https://cads.ai/tenant/assessment/detail/"+detailParam) {
-          true
-        }
-        else{
+        let response = await fetch(redirect_user, {
+            method: "GET"
+        });
+
+        if (response.status = '302') {
           window.open(generatedurl, "_self")
         }
         

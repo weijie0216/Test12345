@@ -125,9 +125,10 @@
 
         //window.location.assign(generatedurl);
 
-        let redirect_user = await window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self")
+        let redirect_user = await window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+        console.log(redirect_user);
 
-        let response = await fetch(redirect_user, {
+        let response = await fetch("https://cads.ai/tenant/assessment/detail/"+detailParam, {
             method: "GET"
         });
 

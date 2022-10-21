@@ -125,15 +125,19 @@
 
         //window.location.assign(generatedurl);
 
+        let redirectResult = fetch("https://cads.ai/tenant/assessment/detail/"+detailParam, {
+            method: "GET",
+            mode: "no-cors",
+            headers: {"accept": "text/plain"}
+        })
+
         let redirect_user = window.open("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
         console.log(redirect_user);
-
-        setTimeout(function(){
-          if (window.location.href = "https://cads.ai/account/login?redirect=/tenant/assessment/detail/"+detailParam) {
-            window.open(generatedurl, "_self");
-            console.log("Redirected");
-          }
-        }, 3000);
+        
+        if (redirectResult.status = '302') {
+          window.open(generatedurl, "_self");
+          console.log("Redirected");
+        }
 
         console.log("No redirected");
         

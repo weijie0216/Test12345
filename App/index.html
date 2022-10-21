@@ -122,23 +122,19 @@
 
         // Retrieving data from JSON
         let generatedurl = result.data;
-
-        window.location.assign(generatedurl);
-
-        redirectUser();
+        
+        if (localStorage.getItem('LoggedIn')) {
+          window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
+          console.log("Redirected");
+        }
+        else{
+          localStorage.setItem('LoggedIn', true);
+          window.location.assign(generatedurl);
+        }
         
         //document.getElementById("testing").src = generatedurl;
 
     };
-
-    async function redirectUser() {
-      await new Promise((resolve, reject) => setTimeout(resolve, 7000));
-
-      if (window.location.href = "https://cads.ai/tenant/tenantHome") {
-        window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
-        console.log("Redirected");
-      }
-    }
 
   }
 

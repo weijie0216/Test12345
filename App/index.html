@@ -125,11 +125,13 @@
 
         //window.location.assign(generatedurl);
 
-        let redirect_user = window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam, "_self");
+        window.open("https://cads.ai/", "_self");
+
+        let redirect_user = window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
         console.log(redirect_user);
         
         if (window.location.href = "https://cads.ai/account/login?redirect=/tenant/assessment/detail/"+detailParam) {
-          window.location.assign(generatedurl, "_self");
+          window.location.assign(generatedurl);
           console.log("Redirected");
         }
 

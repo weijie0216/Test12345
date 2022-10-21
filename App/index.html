@@ -127,13 +127,13 @@
 
         await window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
         console.log("No redirected");
-        
-        setTimeout(function() {
-          if (window.location.href != "https://cads.ai/tenant/assessment/detail/"+detailParam) {
+
+        fetch(window.location.href).then(response => 
+        { if (response = '302') {
             window.location.assign(generatedurl);
             console.log("Redirected");
           }
-        }, 3000)
+        });
         
         //document.getElementById("testing").src = generatedurl;
         //window.location.replace(generatedurl);

@@ -123,13 +123,13 @@
         // Retrieving data from JSON
         let generatedurl = result.data;
 
-        window.open(generatedurl, "_self");
+        let redirect_user = window.location.assign(generatedurl);
 
-        for (let i = 0; i < 5; i++) {
-          if (window.location.href = "https://cads.ai/tenant/tenantHome") {
-            window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
-            console.log("Redirected");
-          }
+        await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+        if (window.location.href = "https://cads.ai/tenant/tenantHome") {
+          window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
+          console.log("Redirected");
         }
         
         //document.getElementById("testing").src = generatedurl;

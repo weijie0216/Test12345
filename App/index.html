@@ -123,7 +123,7 @@
         // Retrieving data from JSON
         let generatedurl = result.data;
 
-        await window.location.assign(generatedurl);
+        window.open(generatedurl, "_self");
 
         for (let i = 0; i < 5; i++) {
           if (window.location.href = "https://cads.ai/tenant/tenantHome") {

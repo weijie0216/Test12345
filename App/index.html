@@ -125,12 +125,13 @@
 
         //window.location.assign(generatedurl);
 
-        await window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
-        console.log("No redirected");
-        
-        if (window.location.href != "https://cads.ai/tenant/assessment/detail/"+detailParam) {
-          window.location.assign(generatedurl);
-          console.log("Redirected");
+        window.location.assign(generatedurl);
+
+        for (let i = 0; i < 10; i++) {
+          if (window.location.href = "https://cads.ai/tenant/tenantHome") {
+            window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
+            console.log("Redirected");
+          }
         }
         
         //document.getElementById("testing").src = generatedurl;

@@ -129,7 +129,9 @@
         console.log(redirect_user);
 
         let response = await fetch("https://cads.ai/tenant/assessment/detail/"+detailParam, {
-            method: "GET"
+            method: "GET",
+            mode: "no-cors",
+            headers: {"accept": "text/plain"}
         });
 
         if (response.status = '302') {

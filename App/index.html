@@ -122,13 +122,14 @@
 
         // Retrieving data from JSON
         let generatedurl = result.data;
+        console.log(getCookie(LoggedIn));
         
-        if (localStorage.getItem('LoggedIn')) {
+        if (getCookie(LoggedIn) = "Yes") {
           window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
           console.log("Redirected");
         }
         else{
-          localStorage.setItem('LoggedIn', true);
+          setCookie();
           window.location.assign(generatedurl);
         }
         
@@ -136,6 +137,28 @@
 
     };
 
+  }
+
+  function setCookie() {
+    const d = new Date();
+    d.setTime(d.getTime() + (24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = "LoggedIn=Yes" + ";" + expires;
+  }
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
   }
 
   // Calling the function

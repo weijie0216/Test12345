@@ -122,9 +122,9 @@
 
         // Retrieving data from JSON
         let generatedurl = result.data;
-        console.log(getCookie(LoggedIn));
+        console.log(getCookie());
         
-        if (getCookie(LoggedIn) = "Yes") {
+        if (getCookie() = "Yes") {
           window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
           console.log("Redirected");
         }
@@ -146,8 +146,8 @@
     document.cookie = "LoggedIn=Yes" + ";" + expires;
   }
 
-  function getCookie(cname) {
-    let name = cname + "=";
+  function getCookie() {
+    let name = "LoggedIn=";
     let ca = document.cookie.split(';');
     for(let i = 0; i < ca.length; i++) {
       let c = ca[i];

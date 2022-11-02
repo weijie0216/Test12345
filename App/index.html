@@ -126,7 +126,6 @@
         
         if (getCookie() == "Yes") {
           window.location.assign("https://cads.ai/tenant/assessment/detail/"+detailParam);
-          console.log("Redirected");
         }
         else{
           setCookie();
@@ -140,10 +139,11 @@
   }
 
   function setCookie() {
-    const d = new Date();
-    d.setTime(d.getTime() + (24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = "LoggedIn=Yes" + ";" + expires;
+    //const d = new Date();
+    //d.setTime(d.getTime() + (24*60*60*1000));
+    //let expires = "expires="+ d.toUTCString();
+    //document.cookie = "LoggedIn=Yes" + ";" + expires;
+    document.cookie = "LoggedIn=Yes";
   }
 
   function getCookie() {

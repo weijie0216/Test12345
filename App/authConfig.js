@@ -8,8 +8,8 @@ const msalConfig = {
   auth: {
     clientId: "a8a5bf2b-2c20-4076-9b45-eb52d07c9e8f", // This is the ONLY mandatory field that you need to supply.
     authority: "https://login.microsoftonline.com/bc591451-3de7-49e0-8e0d-85f9ba7e243f", // Defaults to "https://login.microsoftonline.com/common"
-    redirectUri: "https://msgovtechcads.azurewebsites.net", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.href
-    postLogoutRedirectUri: "https://msgovtechcads.azurewebsites.net/signout", // Simply remove this line if you would like navigate to index page after logout.
+    redirectUri: "https://cadsassessment.azurewebsites.net", // You must register this URI on Azure Portal/App Registration. Defaults to window.location.href
+    postLogoutRedirectUri: "https://cadsassessment.azurewebsites.net/signout", // Simply remove this line if you would like navigate to index page after logout.
     navigateToLoginRequestUrl: false, // If "true", will navigate back to the original request location before processing the auth code response.
   },
   cache: {
